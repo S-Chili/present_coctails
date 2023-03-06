@@ -3,57 +3,38 @@
  * Based on https://draculatheme.com
  */
 
-
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
 
-
-
 // Include theme-specific fonts
-$systemFontsSansSerif: -apple-system,
-					   BlinkMacSystemFont,
-					   avenir next,
-					   avenir,
-					   segoe ui,
-					   helvetica neue,
-					   helvetica,
-					   Cantarell,
-					   Ubuntu,
-					   roboto,
-					   noto,
-					   arial,
-					   sans-serif;
-$systemFontsMono: Menlo,
-				  Consolas,
-				  Monaco,
-				  Liberation Mono,
-				  Lucida Console,
-				  monospace;
+$systemFontsSansSerif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+  segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+  sans-serif;
+$systemFontsMono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+  monospace;
 
 /**
  * Dracula colors by Zeno Rocha
  * https://draculatheme.com/contribute
  */
-html * {
-	color-profile: sRGB;
-	rendering-intent: auto;
-}
+// html * {
+//   color-profile: sRGB;
+//   rendering-intent: auto;
+// }
 
-$background: #282A36;
-$foreground: #F8F8F2;
-$selection: #44475A;
-$comment: #6272A4;
-$red: #FF5555;
-$orange: #FFB86C;
-$yellow: #F1FA8C;
-$green: #50FA7B;
-$purple: #BD93F9;
-$cyan: #8BE9FD;
-$pink: #FF79C6;
-
-
+$background: #282a36;
+$foreground: #f8f8f2;
+$selection: #44475a;
+$comment: #6272a4;
+$red: #ff5555;
+$orange: #ffb86c;
+$yellow: #f1fa8c;
+$green: #50fa7b;
+$purple: #fd5103;
+$cyan: #8be9fd;
+$pink: #fe7031;
 
 // Override theme settings (see ../template/settings.scss)
 $mainColor: $foreground;
@@ -80,53 +61,54 @@ $codeFont: "Fira Code", $systemFontsMono;
 // Define additional color effects based on Dracula spec
 // https://spec.draculatheme.com/
 :root {
-	--r-bold-color: #{$orange};
-	--r-italic-color: #{$yellow};
-	--r-inline-code-color: #{$inlineCodeColor};
-	--r-list-bullet-color: #{$listBulletColor};
+  --r-bold-color: #{$orange};
+  --r-italic-color: #{$yellow};
+  --r-inline-code-color: #{$inlineCodeColor};
+  --r-list-bullet-color: #{$listBulletColor};
 }
 
-.reveal strong, .reveal b {
-	color: var(--r-bold-color);
+.reveal strong,
+.reveal b {
+  color: var(--r-bold-color);
 }
 
-.reveal em, .reveal i, .reveal blockquote {
-	color: var(--r-italic-color);
+.reveal em,
+.reveal i,
+.reveal blockquote {
+  color: var(--r-italic-color);
 }
 
 .reveal code {
-	color: var(--r-inline-code-color);
+  color: var(--r-inline-code-color);
 }
 
 // Dracula colored list bullets and numbers
 .reveal ul {
-	list-style: none;
+  list-style: none;
 }
 
 .reveal ul li::before {
-	content: "•";
-	color: var(--r-list-bullet-color);
-	display: inline-block;
-	width: 1em;
-	margin-left: -1em
+  color: var(--r-list-bullet-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .reveal ol {
-	list-style: none;
-	counter-reset: li;
+  list-style: none;
+  counter-reset: li;
 }
 
 .reveal ol li::before {
-	content: counter(li) ".";
-	color: var(--r-list-bullet-color);
-	display: inline-block;
-	width: 2em;
+  color: var(--r-list-bullet-color);
+  display: inline-block;
+  width: 2em;
 
-	margin-left: -2.5em;
-    margin-right: 0.5em;
-	text-align: right;
+  margin-left: -2.5em;
+  margin-right: 0.5em;
+  text-align: right;
 }
 
 .reveal ol li {
-	counter-increment: li
+  counter-increment: li;
 }

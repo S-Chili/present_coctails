@@ -1,0 +1,42 @@
+.slide-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  font-size: medium;
+  display: flex;
+  align-items: baseline;
+}
+
+.team-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: small;
+}
+
+.li-grid {
+  margin-right: 20px !important;
+}
+
+.stack-ul {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+}
+
+.img-clients {
+  width: 75%;
+  height: 75%;
+}
+
+.img-clients-first {
+  width: 90%;
+  height: 90%;
+}
