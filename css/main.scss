@@ -23,12 +23,26 @@
 
 .stack-ul {
   display: flex !important;
-  justify-content: space-evenly !important;
+  flex-wrap: wrap !important;
+}
+
+.stack-ul-purp {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.stack-li {
+  width: 50% !important;
 }
 
 .team-photo {
   width: 150px;
   height: 150px;
+}
+
+.purp-photo {
+  width: 450px;
+  height: 400px;
 }
 
 .img-clients {
